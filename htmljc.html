@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - CABEZAS ULISES</title>
+  <link rel="stylesheet" href="COQUITA.css">
+</head>
+<body>
+
+  <header>
+    <h1>Cabezas Julian Ulises </h1>
+    <p>Técnico en Soporte de Infraestructura TI</p>
+  </header>
+
+  <!-- imagen -->
+  <section class="card sobre-mi">
+    <div class="texto">
+      <h2>Sobre mí</h2>
+      <p>Soy un estudiante con experiencia basica, intalar sistemas (linux/windor) , configurando maquinas ,programacion,etc....</p>
+    </div>
+    <div class="imagen">
+      <img src="foto1.jpeg" alt="Imagen de julian" class="profile-image">
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Proyectos Técnicos en un  futuro</h2>
+    <ul>
+      <li><strong>Configurar pc (Las del terciario):</strong> cambiar el sistema operativo a windor 10, 32Bit y 64Bit.</li>
+      <li><strong>Unir IA:</strong> Configurar un sistema operativo con arch linux + IA (en la terminal).</li>
+      <li><strong>Crear Juego completo:</strong> Un juego indi popular de plataforma.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Cursos</h2>
+    <ul>
+      <li><strong>Programación:</strong> Python basica .</li>
+      <li><strong>Arte:</strong> ceramica .</li>
+      <li><strong>Dibujo:</strong> Formas .</li>
+      <li><strong>Edicion:</strong> imagenes y videos .</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Educación</h2>
+    <ul>
+      <li><strong>Colegio Secundario :</strong>  N°35.</li>
+      <li><strong>Primaria :</strong> N°322 "Independecia del peru".</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Contacto</h2>
+    <p>Email: 
+      <span class="correo" onclick="copiarCorreo()">cajulian213@gmail.com</span> 
+      <span id="mensaje-copiado" style="display:none;">📋 Copiado!</span>
+    </p>
+    <p>Celular: <a href="https://wa.link/cswub3" target="_blank" class="correo">+54 9 3885397748</a></p>
+  </section>
+
+  <!-- Objeto interactivo UPDT -->
+  <section class="emoji-box" onclick="toggleFace()">
+    <div id="emoji-face">😄</div>
+    <p>¡Hace clic para cambiar mi estado!</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Portfolio Web Cabezas Ulises Julian</p>
+  </footer>
+
+  <script>
+    // Emojis interactivos
+    let feliz = true;
+    function toggleFace() {
+      const emoji = document.getElementById("emoji-face");
+      emoji.textContent = feliz ? "😊" : "😄";
+      feliz = !feliz;
+    }
+
+    // Copiar correo al portapapeles , XD
+    function copiarCorreo() {
+      const correo = "cajulian213@gmail.com";
+      navigator.clipboard.writeText(correo).then(() => {
+        document.getElementById("mensaje-copiado").style.display = "inline";
+        setTimeout(() => {
+          document.getElementById("mensaje-copiado").style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
